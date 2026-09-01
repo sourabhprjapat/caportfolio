@@ -438,6 +438,61 @@
         }
 
 
+        /* Project cards — matched to the reference layout */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 36px;
+            width: 100%;
+            max-width: 1200px;
+            align-items: stretch;
+        }
+
+        .project-card {
+            width: 100%;
+            min-height: 700px;
+            height: 100%;
+            padding: 55px 42px 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .project-card .folder-icon {
+            margin-bottom: 32px;
+        }
+
+        .project-card .project-title {
+            min-height: 86px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .project-card .project-desc {
+            flex-grow: 1;
+            margin-bottom: 35px;
+        }
+
+        .project-card .tech-list {
+            margin-top: auto;
+            min-height: 70px;
+            align-content: center;
+        }
+
+        @media (max-width: 900px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+
+            .project-card {
+                min-height: 560px;
+            }
+        }
+
         /* Certifications Section */
         .certifications-grid {
             display: grid;
@@ -745,12 +800,14 @@
             <div class="section-subtitle">Engineering Portfolio</div>
             <h2 class="section-title">Featured Projects</h2>
         </div>
-        
+
         <div class="projects-grid">
             <div class="project-card glass-panel">
                 <div class="folder-icon">🛡️</div>
                 <h3 class="project-title">IoT-Based Secure Door Lock</h3>
-                <p class="project-desc">Architected a robust smart-access prototype bridging physical hardware with digital authentication. Integrated multi-factor security, real-time OTP generation, and biometric verification.</p>
+                <p class="project-desc">
+                    Architected a robust smart-access prototype bridging physical hardware with digital authentication. Integrated multi-factor security, real-time OTP generation, and biometric verification.
+                </p>
                 <ul class="tech-list">
                     <li>IoT</li>
                     <li>Hardware Design</li>
@@ -758,20 +815,34 @@
                 </ul>
             </div>
 
-        </div>
-    </section>
-
+            <div class="project-card glass-panel">
+                <div class="folder-icon">👨‍🎓</div>
+                <h3 class="project-title">Student Management System</h3>
+                <p class="project-desc">
+                    Engineered a high-performance, console-based digital ledger utilizing core C++ OOP paradigms. Implemented dynamic file handling for optimized memory management and fast CRUD operations.
+                </p>
+                <ul class="tech-list">
+                    <li>C++</li>
+                    <li>OOP</li>
+                    <li>File Handling</li>
+                </ul>
+            </div>
 
             <div class="project-card glass-panel">
                 <div class="folder-icon">🧠</div>
                 <h3 class="project-title">AI & ML Diagnostic Research</h3>
-                <p class="project-desc">Executed comprehensive academic research on modern neural networks. Explored real-world computer vision applications and fuzzy logic systems, synthesizing data into presentation-ready insights.</p>
+                <p class="project-desc">
+                    Executed comprehensive academic research on modern neural networks. Explored real-world computer vision applications and fuzzy logic systems, synthesizing data into presentation-ready insights.
+                </p>
                 <ul class="tech-list">
                     <li>Machine Learning</li>
                     <li>Computer Vision</li>
                     <li>Research</li>
                 </ul>
             </div>
+        </div>
+    </section>
+
 
     <!-- Certifications Section -->
     <section id="certifications" class="fade-in">
